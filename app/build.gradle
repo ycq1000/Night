@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.android.databinding'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.ycq.night"
+        minSdkVersion 23
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    /*dataBinding {
+        enabled = true
+    }*/
+}
+//30:BC:FD:00:91:D4:1B:F5:45:E4:51:14:47:36:3A:B1:F8:B0:60:11
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/AMap_2DMap_V2.8.1_20160202.jar')
+    compile project(':domain')
+    //compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0'
+    //compile 'com.squareup.okhttp3:okhttp:3.1.2'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.android.support:support-annotations:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+}

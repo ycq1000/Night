@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="toolbar" />
+
+    <item type="id" name="editView" />
+
+    <item type="id" name="textView" />
+    <item type="id" name="textView2"/>
+
+    <item type="id" name="recyclerView" />
+    <item type="id" name="button" />
+</resources>

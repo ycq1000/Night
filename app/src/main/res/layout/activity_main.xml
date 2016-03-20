@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+>
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/title"
+            android:text="" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_below="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="刷新"/>
+
+        <Button android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/button"
+            android:layout_below="@id/title"
+            android:clickable="true"
+            android:text="登录"/>
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/map"
+            android:layout_below="@id/button"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"></com.amap.api.maps2d.MapView>
+
+        <TextView
+            android:id="@+id/cate"
+            android:layout_below="@id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="category"
+            android:maxLines="10"
+            android:ellipsize="end"
+            android:text="ff"/>
+        <View
+            android:layout_below="@id/cate"
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="1px"></View>
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/recyclerview"/>
+        <com.example.ycq.night.widget.SquareImageView
+            android:id="@+id/xx"
+            android:layout_below="@id/recyclerview"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic3"/>
+
+        <com.example.ycq.night.widget.SingleRowRoundTextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@id/recyclerview"
+            android:layout_toRightOf="@id/xx" android:background="#44000044"
+            android:text="从容从容从容从容从从容从容从容从容从"
+            custom:custom_borderColor="#ff0000"
+            custom:custom_backColor="#0000ff"/>
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/xx"
+            android:editable="false"
+            style="?android:attr/textViewStyle"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:cursorVisible="false"
+            android:background="@null"
+            android:textIsSelectable="true"
+            android:text="今天focusability"/>
+    </RelativeLayout>
+</layout>

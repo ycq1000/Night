@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 实心(用作背景色) -->
+    <solid android:color="#ff9d77"/>
+    <!-- 描边 -->
+    <stroke
+        android:width="2dp"
+        android:color="#ff0000"
+        android:dashGap="5dp"
+        android:dashWidth="10dp"/>
+    <padding
+        android:left="50dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp" />
+    <!-- 圆角 -->
+    <corners
+        android:radius="14dp" />
+    <!-- 渐变(angle:45倍数) -->
+    <gradient
+        android:startColor="#0000ff"
+        android:endColor="#FFFFFF"
+        android:type="linear"
+        android:angle="90"/>
+</shape>
